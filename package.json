@@ -1,0 +1,13 @@
+{
+  "name": "vantage-site",
+  "version": "1.0.0",
+  "description": "Vantage Point website backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"No tests\""
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

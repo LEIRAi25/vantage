@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vantage Point - Sales Accelerator</title>
+  <meta name="description" content="Vantage Point Sales Accelerator" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <div class="floating-elements">
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
+  </div>
+
+  <button class="theme-toggle" type="button" onclick="toggleTheme()" aria-label="Toggle theme">
+    <span class="theme-toggle-icon active" aria-hidden="true">🌙</span>
+    <span class="theme-toggle-icon" aria-hidden="true">☀️</span>
+  </button>
+
+  <div class="wrap">
+    <header>
+      <a class="brand" href="index.html" aria-label="Vantage Point Home">
+        <div class="logo" aria-hidden="true"></div>
+        <span class="brand-text">VANTAGE POINT</span>
+      </a>
+      <nav class="header-actions" aria-label="Main navigation">
+        <a class="btn secondary" href="index.html">Sessions</a>
+        <a class="btn secondary" href="alacarte.html">À La Carte</a>
+        <a class="btn secondary" href="terms.html">Terms</a>
+        <a class="btn accent" href="#checkout">Checkout</a>
+      </nav>
+    </header>
+
+    <main id="main">
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Sales Accelerator</h1>
+        <p class="sub">Toolkit, sessions, and templates to scale your revenue.</p>
+        <a class="btn accent large" href="alacarte.html">Browse À La Carte</a>
+      </div>
+    </section>
+
+    <section id="checkout" class="animate-on-scroll">
+      <h2 class="section-title">Ready to Scale?</h2>
+      <p class="section-subtitle">Reserve a session or build your own toolkit.</p>
+      <a class="btn gold large" href="#">Reserve Session</a>
+    </section>
+
+    <section id="intake" class="intake-section animate-on-scroll">
+      <h2 class="section-title">DFY Intake</h2>
+      <form id="intakeForm">
+        <label for="name">Name</label>
+        <input id="name" name="name" required />
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+        <label for="message">What do you need?</label>
+        <textarea id="message" name="message" required></textarea>
+        <button class="btn" type="submit">Submit</button>
+        <p id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    </main>
+
+    <footer>
+      <div class="footer-text">© <span id="year"></span> Vantage Point • Sales Accelerator</div>
+      <div class="footer-tagline">Transform your sales process. Scale your business. <a href="terms.html">Terms & Refunds</a></div>
+    </footer>
+  </div>
+</body>
+</html>

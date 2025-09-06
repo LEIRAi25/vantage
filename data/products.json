@@ -1,0 +1,122 @@
+[
+  {
+    "id": "high-ticket-script",
+    "title": "High‑Ticket Closing Script",
+    "price": 147,
+    "description": "Full call flow, discovery prompts, trial closes.",
+    "url": "https://buy.stripe.com/3cIbJ0h243uubap32Z3AY01",
+    "includes": ["Full call flow", "Discovery prompts", "Trial closes"]
+  },
+  {
+    "id": "objection-handling",
+    "title": "Objection Handling System",
+    "price": 97,
+    "description": "Root‑cause map + language patterns cheat sheet.",
+    "url": "https://buy.stripe.com/8x2eVceTWghga6l5b73AY02",
+    "includes": ["Objection map", "Language patterns"]
+  },
+  {
+    "id": "sales-call-structure",
+    "title": "Sales Call Structure Pack",
+    "price": 127,
+    "description": "Discovery, demo, and decision frameworks.",
+    "url": "https://buy.stripe.com/9B6fZgh24ghgdixgTP3AY03",
+    "includes": ["Call structure template", "Pre-call checklist", "Post-call follow-up"]
+  },
+  {
+    "id": "nurture-sequence",
+    "title": "12‑Week Nurture Sequence",
+    "price": 197,
+    "description": "Warm‑up → value → conversion. Editable templates.",
+    "url": "https://buy.stripe.com/8x2cN47ru9SS1zPeLH3AY04",
+    "includes": ["12-week sequence", "Editable templates"]
+  },
+  {
+    "id": "cold-email-kit",
+    "title": "Outbound Cold Email Kit",
+    "price": 147,
+    "description": "5 proven angles, deliverability checklist, cadence.",
+    "url": "https://buy.stripe.com/28E6oG9zCghg6U9cDz3AY05",
+    "includes": ["25 email templates", "Deliverability checklist", "Cadence planner"]
+  },
+  {
+    "id": "follow-up-engine",
+    "title": "Follow‑Up Engine",
+    "price": 127,
+    "description": "Multi‑channel follow‑up copy bank (email/DM/SMS).",
+    "url": "https://buy.stripe.com/fZubJ0eTW3uucetavr3AY06",
+    "includes": ["Follow-up schedule", "Templates", "Timing guide"]
+  },
+  {
+    "id": "pitch-deck-system",
+    "title": "Pitch Deck Template System",
+    "price": 697,
+    "description": "Offer/funding decks with narrative + visual hierarchy.",
+    "url": "https://buy.stripe.com/14A7sK7ru0iicet9rn3AY07",
+    "includes": ["8 pitch templates", "Design guidelines", "Content frameworks"]
+  },
+  {
+    "id": "vsl-template",
+    "title": "VSL Page Template",
+    "price": 167,
+    "description": "Above‑the‑fold, proof blocks, CTAs, FAQs.",
+    "url": "#",
+    "includes": ["Landing layout", "Proof blocks", "FAQ section"]
+  },
+  {
+    "id": "landing-page",
+    "title": "High‑Convert Landing Page",
+    "price": 197,
+    "description": "Hero copy, structure, and section order (HTML/CSS).",
+    "url": "#",
+    "includes": ["Hero copy", "Structure", "Section order"]
+  },
+  {
+    "id": "sdr-cold-call",
+    "title": "SDR Cold Call Script Pack",
+    "price": 117,
+    "description": "Openers, pattern breaks, qualification tree.",
+    "url": "#",
+    "includes": ["Openers", "Pattern breaks", "Qualification tree"]
+  },
+  {
+    "id": "appointment-setter-kit",
+    "title": "Appointment Setter Kit",
+    "price": 137,
+    "description": "DM prompts, handoff scripts, calendar hygiene SOP.",
+    "url": "#",
+    "includes": ["DM prompts", "Handoff scripts", "Calendar SOP"]
+  },
+  {
+    "id": "sales-playbook",
+    "title": "Sales Playbook Template",
+    "price": 227,
+    "description": "Roles, KPIs, cadences, reviews, QA rubrics.",
+    "url": "#",
+    "includes": ["Roles", "KPIs", "Cadences"]
+  },
+  {
+    "id": "starter-pack",
+    "title": "Starter Pack",
+    "price": 297,
+    "description": "High‑Ticket Script + Objections + Follow‑Up.",
+    "url": "#",
+    "includes": ["High-Ticket Script", "Objection Handling", "Follow-Up Engine"]
+  },
+  {
+    "id": "pro-pack",
+    "title": "Pro Pack",
+    "price": 497,
+    "description": "Call Structure + 12‑Week Nurture + Outbound Kit.",
+    "url": "#",
+    "includes": ["Sales Call Structure", "12-Week Nurture", "Outbound Cold Email Kit"]
+  },
+  {
+    "id": "closer-pack",
+    "title": "Closer Pack",
+    "price": 997,
+    "description": "Everything above + Pitch Deck System.",
+    "url": "#",
+    "includes": ["All products", "Pitch Deck System"]
+  }
+]
