@@ -1408,6 +1408,46 @@ footer {
     flex-direction: column;
     gap: 16px;
   }
+
+  /* Reserve section mobile fix */
+  .reserve-options {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin: 32px 0;
+  }
+
+  .reserve-card {
+    padding: 24px;
+    margin: 0;
+  }
+
+  .reserve-card h3 {
+    font-size: 20px;
+  }
+
+  .reserve-card .price {
+    font-size: 28px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .reserve-card {
+    padding: 20px;
+  }
+
+  .reserve-card h3 {
+    font-size: 18px;
+  }
+
+  .reserve-card .price {
+    font-size: 24px;
+  }
+
+  .reserve-card .features li {
+    font-size: 14px;
+    padding: 6px 0;
+  }
 }
 
 /* Visually hidden for screen readers */
