@@ -27,7 +27,7 @@ vercel dev
 vantage-point-website/
 ├── index.html              # Homepage
 ├── alacarte.html           # À la carte products
-├── checkout.html           # Checkout page
+├── checkout.html           # Redirect page (backup)
 ├── confirmation.html       # Order confirmation
 ├── intake.html            # Session intake form
 ├── terms.html             # Terms & refunds
