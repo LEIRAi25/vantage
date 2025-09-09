@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vantage Point — Checkout</title>
+  <meta name="description" content="Complete your purchase and transform your sales process.">
+  <meta name="theme-color" content="#102e16">
+  <meta name="color-scheme" content="dark light">
+  <link rel="canonical" href="https://vanpointco.com/checkout.html">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header>
+    <div class="container">
+      <nav class="nav" role="navigation">
+        <a class="brand" href="index.html">
+          <div class="logo">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="12" cy="12" r="12" fill="#102e16"/>
+              <polygon points="12,18 18,6 6,6" fill="white"/>
+            </svg>
+          </div>
+          <span class="brand-text">VANTAGE POINT</span>
+        </a>
+        <button class="mobile-menu-btn" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links" id="nav-menu">
+          <a href="index.html#products" class="btn btn-secondary">Products</a>
+          <a href="alacarte.html" class="btn btn-secondary">À La Carte</a>
+          <a href="index.html#bundles" class="btn btn-secondary">Bundles</a>
+          <a href="checkout.html?product=Standard%20Accelerator&price=500" class="btn btn-accent">Reserve – $500</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Grand hero -->
+    <section class="hero">
+      <div class="particles" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hero-badge">Secure Checkout</div>
+        <h1 class="section-title reveal">Complete Your <span class="accent">Purchase</span></h1>
+        <p class="section-subtitle reveal">Transform your sales process with our proven systems and strategies.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <section class="panel checkout-section">
+        <div class="checkout-container">
+          <div class="order-summary">
+            <h2>Order Summary</h2>
+            <div class="order-item">
+              <div class="item-info">
+                <h3 id="product-name">Product</h3>
+                <p id="product-description">Professional sales system for immediate implementation.</p>
+              </div>
+              <div class="item-price"><span id="product-price">$0.00</span></div>
+            </div>
+            <div class="total-section">
+              <div class="total-line">
+                <span>Total</span>
+                <span id="total-price">$0.00</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="checkout-form">
+            <h2>Payment Information</h2>
+            <form id="checkout-form" class="form-grid">
+              <div class="full form-group">
+                <label for="email">Email Address *</label>
+                <input id="email" name="email" type="email" required placeholder="you@company.com">
+              </div>
+
+              <div class="full form-group">
+                <label for="card-number">Card Number *</label>
+                <input id="card-number" name="card-number" type="text" required placeholder="1234 5678 9012 3456">
+              </div>
+
+              <div class="form-group">
+                <label for="expiry">Expiry Date *</label>
+                <input id="expiry" name="expiry" type="text" required placeholder="MM/YY">
+              </div>
+
+              <div class="form-group">
+                <label for="cvv">CVV *</label>
+                <input id="cvv" name="cvv" type="text" required placeholder="123">
+              </div>
+
+              <div class="full form-group">
+                <label for="name">Cardholder Name *</label>
+                <input id="name" name="name" type="text" required placeholder="John Doe">
+              </div>
+
+              <div class="full form-group">
+                <label for="billing-address">Billing Address *</label>
+                <input id="billing-address" name="billing-address" type="text" required placeholder="123 Main St, City, State 12345">
+              </div>
+
+              <div class="full">
+                <button type="submit" class="btn btn-accent btn-large" style="width:100%;">Complete Purchase</button>
+              </div>
+            </form>
+
+            <div class="security-info">
+              <p><strong>🔒 Secure Payment:</strong> Your payment information is encrypted and secure.</p>
+              <p><strong>📧 Instant Access:</strong> You'll receive access immediately after payment.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="mailto:info@vanpointco.com">Questions? info@vanpointco.com</a>
+        <a href="terms.html">Terms & Refunds</a>
+        <a href="index.html">Homepage</a>
+        <a href="alacarte.html">À La Carte</a>
+      </div>
+      <p>&copy; 2025 Vantage Point — Sales Accelerator</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+  <script src="common.js"></script>
+  <script>
+    document.querySelector('.mobile-menu-btn')?.addEventListener('click', function () {
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', String(!expanded));
+      document.getElementById('nav-menu')?.classList.toggle('mobile-open');
+    });
+
+    (function initParticles(){
+      const container = document.querySelector('.particles');
+      if (!container) return;
+      for (let i=0; i<12; i++){
+        const p = document.createElement('div');
+        p.className = 'particle';
+        p.style.left = Math.random()*100 + '%';
+        p.style.animationDelay = Math.random()*20 + 's';
+        p.style.animationDuration = (18 + Math.random()*12) + 's';
+        container.appendChild(p);
+      }
+    })();
+
+    // Parse URL parameters and populate product info
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const productName = urlParams.get('product');
+      const productPrice = urlParams.get('price');
+
+      if (productName) {
+        document.getElementById('product-name').textContent = productName;
+      }
+
+      if (productPrice) {
+        const price = '$' + Number(productPrice).toLocaleString();
+        document.getElementById('product-price').textContent = price;
+        document.getElementById('total-price').textContent = price;
+      }
+
+      // Handle form submission
+      document.getElementById('checkout-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // In a real implementation, you would process the payment here
+        // For now, redirect to confirmation page
+        const productName = urlParams.get('product') || 'Product';
+        const productPrice = urlParams.get('price') || '0';
+        
+        window.location.href = `confirmation.html?product=${encodeURIComponent(productName)}&price=${productPrice}`;
+      });
+    });
+  </script>
+</body>
+</html>

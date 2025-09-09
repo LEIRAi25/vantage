@@ -1,0 +1,32 @@
+{
+  "name": "vantage-point-website",
+  "version": "1.0.0",
+  "description": "Vantage Point Sales Accelerator - Professional sales infrastructure and consulting",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "node optimize-assets.js",
+    "optimize-assets": "node optimize-assets.js",
+    "analyze-assets": "node optimize-assets.js",
+    "deploy": "vercel --prod",
+    "deploy:netlify": "netlify deploy --prod",
+    "preview": "vercel",
+    "start": "vercel dev"
+  },
+  "keywords": [
+    "sales",
+    "accelerator",
+    "consulting",
+    "sales-systems",
+    "business-growth"
+  ],
+  "author": "Vantage Point",
+  "license": "MIT",
+  "devDependencies": {
+    "vercel": "^32.0.0"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

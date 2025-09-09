@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vantage Point – Sales Accelerator</title>
+  <meta name="description" content="Audit. Fix. Scale. A 90-minute working session to install repeatable sales systems.">
+  <meta name="theme-color" content="#102e16">
+  
+  <!-- Three.js for 3D logo -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta name="color-scheme" content="dark light">
+  <link rel="canonical" href="https://vanpointco.com/index.html">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header>
+    <div class="container">
+      <nav class="nav" role="navigation">
+        <a class="brand" href="#top">
+          <div class="logo">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="12" cy="12" r="12" fill="#102e16"/>
+              <path d="M12 18 18 6 6 6" fill="white"/>
+            </svg>
+          </div>
+          <span class="brand-text">VANTAGE POINT</span>
+        </a>
+        <button class="mobile-menu-btn" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links" id="nav-menu">
+          <a href="#products" class="btn btn-secondary">Products</a>
+          <a href="alacarte.html" class="btn btn-secondary">À La Carte</a>
+          <a href="#bundles" class="btn btn-secondary">Bundles</a>
+          <a href="#reserve" class="btn btn-accent">Reserve – $500</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <section class="hero" id="top">
+        <!-- Ambient particles -->
+        <div class="particles" aria-hidden="true"></div>
+
+        <!-- Live availability widget -->
+        <div class="availability-widget">
+          <div class="availability-dot" aria-hidden="true"></div>
+          <span class="availability-text">
+            <span class="availability-count">3</span> spots left this week
+          </span>
+        </div>
+
+        <!-- 3D Logo -->
+        <div class="logo-3d-container" aria-hidden="true">
+          <div id="logo-3d-wrapper"></div>
+        </div>
+
+        <div class="hero-badge">Trusted by 500+ Revenue Leaders</div>
+        <h1 class="reveal">Audit. Fix. Scale. <span class="accent">90-minutes to a repeatable sales system.</span></h1>
+        <p class="hero-subtitle reveal">A focused working session led by a Senior Sales Architect</p>
+        <p class="hero-description reveal">
+          Diagnose your sales process, implement 3 immediate fixes, and map your next 30 days. 
+          Includes the complete Sales Toolkit used in $2.4M+ campaigns.
+        </p>
+        
+        <div class="hero-actions reveal">
+          <a href="#reserve" class="btn btn-accent btn-large">Reserve Session – $500</a>
+          <a href="#products" class="btn btn-secondary btn-large">Browse Products</a>
+        </div>
+
+        <!-- Animated Stats -->
+        <div class="stats">
+          <div class="stat reveal">
+            <span class="stat-number" data-target="2400000" data-prefix="$" data-suffix="K+">$0K+</span>
+            <div class="stat-label">Closed in campaigns</div>
+          </div>
+          <div class="stat reveal">
+            <span class="stat-number" data-target="500" data-suffix="+">0+</span>
+            <div class="stat-label">Sessions completed</div>
+          </div>
+          <div class="stat reveal">
+            <span class="stat-number" data-target="96" data-suffix="%">0%</span>
+            <div class="stat-label">Success rate</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonial Carousel -->
+      <section class="testimonial-carousel">
+        <div class="testimonial-track" id="testimonial-track">
+          <div class="testimonial-slide">
+            <div class="testimonial-text">
+              "This session transformed our sales approach. We went from 2% conversion to 23% in 30 days. 
+              The toolkit alone paid for itself 10x over."
+            </div>
+            <div class="testimonial-author">
+              <strong>Sarah Chen</strong>
+              <span>SaaS Founder, $2M ARR</span>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-text">
+              "The High-Ticket Closing Script alone transformed our conversion rate from 8% to 31%. 
+              These aren't just templates—they're battle-tested systems."
+            </div>
+            <div class="testimonial-author">
+              <strong>Marcus Rodriguez</strong>
+              <span>Sales Director, $5M ARR SaaS</span>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-text">
+              "We implemented the nurture sequence and saw a 4x increase in qualified leads. 
+              The ROI was immediate and measurable."
+            </div>
+            <div class="testimonial-author">
+              <strong>Lisa Park</strong>
+              <span>VP Sales, Enterprise Tech</span>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-dots" role="tablist" aria-label="Testimonial navigation">
+          <button class="carousel-dot active" role="tab" aria-selected="true" aria-label="Testimonial 1"></button>
+          <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Testimonial 2"></button>
+          <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Testimonial 3"></button>
+        </div>
+      </section>
+
+      <!-- Core Sales Infrastructure (Black Cards) -->
+      <section id="products" class="panel black-card-section">
+        <h2 class="section-title">Core Sales Infrastructure</h2>
+        <p class="section-subtitle">Essential components for any high-performing sales operation</p>
+        
+        <div class="products-grid">
+          <div class="product-card reveal">
+            <span class="badge">Most Popular</span>
+            <h3 class="product-title">High-Ticket Closing Script</h3>
+            <div class="product-price">497</div>
+            <p class="product-description">
+              Complete call flow with discovery prompts, objection pre-frames, trial closes, and assumptive close sequences.
+            </p>
+            <div class="product-includes">
+              <p><strong>Includes:</strong> Call structure, discovery framework, trial close sequences</p>
+            </div>
+            <a href="checkout.html?product=High-Ticket%20Closing%20Script&price=497" class="btn btn-primary">Get Script</a>
+            <div class="case-study-preview">
+              <p class="case-study-text">
+                Client case: <span class="case-study-metric">312% increase</span> in close rate within first month. 
+                B2B SaaS moved from $45K to $187K MRR using this exact script framework.
+              </p>
+            </div>
+          </div>
+
+          <div class="product-card reveal">
+            <h3 class="product-title">Objection Handling System</h3>
+            <div class="product-price">397</div>
+            <p class="product-description">
+              Root-cause mapping system with proven language patterns for the 12 most common objections.
+            </p>
+            <div class="product-includes">
+              <p><strong>Includes:</strong> Objection map, response scripts, prevention techniques</p>
+            </div>
+            <a href="checkout.html?product=Objection%20Handling%20System&price=397" class="btn btn-primary">Get System</a>
+            <div class="case-study-preview">
+              <p class="case-study-text">
+                Client case: <span class="case-study-metric">67% reduction</span> in deal slippage. 
+                Enterprise team closed 8 of 10 stalled deals using these patterns.
+              </p>
+            </div>
+          </div>
+
+          <div class="product-card reveal">
+            <h3 class="product-title">12-Week Nurture Sequence</h3>
+            <div class="product-price">697</div>
+            <p class="product-description">
+              Complete email sequence: 4 weeks warm-up, 4 weeks value delivery, 4 weeks conversion.
+            </p>
+            <div class="product-includes">
+              <p><strong>Includes:</strong> 36 email templates, subject lines, automation guide</p>
+            </div>
+            <a href="checkout.html?product=12-Week%20Nurture%20Sequence&price=697" class="btn btn-primary">Get Sequence</a>
+            <div class="case-study-preview">
+              <p class="case-study-text">
+                Client case: <span class="case-study-metric">4x increase</span> in qualified leads. 
+                Marketing agency generated $340K from cold list using this sequence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bundles Section -->
+      <section id="bundles" class="panel">
+        <h2 class="section-title">Complete Sales Systems</h2>
+        <p class="section-subtitle">Everything you need in one package. Save thousands compared to buying individually.</p>
+        
+        <div class="bundles-grid">
+          <div class="bundle-card reveal">
+            <div class="bundle-header">
+              <h3 class="bundle-title">Starter Pack</h3>
+              <div class="bundle-price">
+                <span class="price-original">$1,591</span>
+                <span class="price-current">$697</span>
+                <span class="price-savings">Save $893</span>
+              </div>
+            </div>
+            <div class="bundle-includes">
+              <h4>Includes:</h4>
+              <ul>
+                <li>High-Ticket Closing Script</li>
+                <li>Objection Handling System</li>
+                <li>Sales Call Structure Pack</li>
+                <li>Follow-Up Engine</li>
+              </ul>
+            </div>
+            <a href="checkout.html?product=Starter%20Pack&price=697" class="btn btn-primary">Get Starter Pack</a>
+          </div>
+
+          <div class="bundle-card popular reveal">
+            <span class="badge">Most Popular</span>
+            <div class="bundle-header">
+              <h3 class="bundle-title">Pro Pack</h3>
+              <div class="bundle-price">
+                <span class="price-original">$2,888</span>
+                <span class="price-current">$1,197</span>
+                <span class="price-savings">Save $1,694</span>
+              </div>
+            </div>
+            <div class="bundle-includes">
+              <h4>Includes:</h4>
+              <ul>
+                <li>Everything in Starter Pack</li>
+                <li>12-Week Nurture Sequence</li>
+                <li>Outbound Cold Email Kit</li>
+                <li>Appointment Setter Kit</li>
+                <li>SDR Cold Call Script Pack</li>
+              </ul>
+            </div>
+            <a href="checkout.html?product=Pro%20Pack&price=1197" class="btn btn-primary">Get Pro Pack</a>
+          </div>
+
+          <div class="bundle-card premium reveal">
+            <span class="badge premium-badge">Ultimate</span>
+            <div class="bundle-header">
+              <h3 class="bundle-title">Closer Pack</h3>
+              <div class="bundle-price">
+                <span class="price-original">$4,888</span>
+                <span class="price-current">$2,497</span>
+                <span class="price-savings">Save $2,391</span>
+              </div>
+            </div>
+            <div class="bundle-includes">
+              <h4>Includes:</h4>
+              <ul>
+                <li>Everything in Pro Pack</li>
+                <li>Pitch Deck Template System</li>
+                <li>VSL Page Template</li>
+                <li>High-Convert Landing Page</li>
+                <li>Sales Playbook Template</li>
+              </ul>
+            </div>
+            <a href="checkout.html?product=Closer%20Pack&price=2497" class="btn btn-primary">Get Closer Pack</a>
+          </div>
+        </div>
+
+        <div class="bundles-cta">
+          <p class="cta-text">Need individual components? Check out our à la carte selection.</p>
+          <a href="alacarte.html" class="btn btn-secondary btn-large">Browse À La Carte</a>
+        </div>
+      </section>
+
+      <!-- Reserve Section -->
+      <section id="reserve" class="panel highlight-section">
+        <h2 class="section-title">Ready to Transform Your Sales?</h2>
+        <p class="section-subtitle">Book your 90-minute accelerator session and get immediate results</p>
+        
+        <div class="reserve-content">
+          <div class="reserve-options">
+            <div class="reserve-card">
+              <h3>Standard Accelerator</h3>
+              <div class="price">$500</div>
+              <ul class="features">
+                <li>90-minute working session</li>
+                <li>Live sales process audit</li>
+                <li>3 immediate fixes implemented</li>
+                <li>30-day roadmap created</li>
+                <li>Complete Sales Toolkit included</li>
+              </ul>
+              <a href="checkout.html?product=Standard%20Accelerator&price=500" class="btn btn-accent btn-large">Reserve Session</a>
+            </div>
+
+            <div class="reserve-card premium">
+              <span class="badge">VIP</span>
+              <h3>VIP Accelerator</h3>
+              <div class="price">$1,500</div>
+              <ul class="features">
+                <li>Everything in Standard</li>
+                <li>Session with Principal Lead</li>
+                <li>5 priority fixes implemented</li>
+                <li>90-day GTM plan</li>
+                <li>Custom assets within 72 hours</li>
+                <li>14 days of direct support</li>
+              </ul>
+              <a href="checkout.html?product=VIP%20Accelerator&price=1500" class="btn btn-accent btn-large">Reserve VIP Session</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section id="faq" class="panel">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq">
+          <details class="reveal">
+            <summary>Why $500 for the Standard session?</summary>
+            <p>You're investing in proven systems, not just time. In one 90-minute session, we'll diagnose your pipeline, implement fixes live, and leave you with a 30-day roadmap plus our complete Sales Toolkit.</p>
+          </details>
+          
+          <details class="reveal">
+            <summary>How do bundles save money vs. individual products?</summary>
+            <p>Significant savings: Starter Pack saves $893, Pro Pack saves $1,694, and Closer Pack saves over $2,000 compared to buying components individually. The math makes bundles a clear choice.</p>
+          </details>
+          
+          <details class="reveal">
+            <summary>What makes VIP worth the upgrade?</summary>
+            <p>VIP includes everything in Standard plus: customized assets delivered within 72 hours, session recording, 90-day strategic plan, and 14 days of direct support. Perfect for teams ready to implement immediately.</p>
+          </details>
+
+          <details class="reveal">
+            <summary>Are refunds available?</summary>
+            <p>All sales are final. No refunds. Due to the instant-access nature of our digital products and the immediate value delivered in sessions, we maintain a strict no-refund policy as outlined in our Terms & Policies.</p>
+          </details>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="mailto:info@vanpointco.com">Questions? info@vanpointco.com</a>
+        <a href="terms.html">Terms & Policies</a>
+        <a href="#products">Products</a>
+        <a href="alacarte.html">À La Carte</a>
+      </div>
+      <p>&copy; 2025 Vantage Point – Sales Accelerator</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+  <script src="common.js"></script>
+</body>
+</html>

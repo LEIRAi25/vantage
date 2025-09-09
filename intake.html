@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vantage Point — Session Intake</title>
+  <meta name="description" content="Tell us about your goals so we can maximize your 90-minute session.">
+  <meta name="theme-color" content="#102e16">
+  <meta name="color-scheme" content="dark light">
+  <link rel="canonical" href="https://vanpointco.com/intake.html">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header>
+    <div class="container">
+      <nav class="nav" role="navigation">
+        <a class="brand" href="index.html">
+          <div class="logo">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="12" cy="12" r="12" fill="#102e16"/>
+              <polygon points="12,18 18,6 6,6" fill="white"/>
+            </svg>
+          </div>
+          <span class="brand-text">VANTAGE POINT</span>
+        </a>
+        <button class="mobile-menu-btn" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="nav-menu">
+          <a href="index.html#products" class="btn btn-secondary">Products</a>
+          <a href="alacarte.html" class="btn btn-secondary">À La Carte</a>
+          <a href="index.html#bundles" class="btn btn-secondary">Bundles</a>
+          <a href="checkout.html?product=Standard%20Accelerator&price=500" class="btn btn-accent">Reserve – $500</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Grand hero -->
+    <section class="hero">
+      <div class="particles" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hero-badge">Pre‑Session</div>
+        <h1 class="section-title reveal">Session <span class="accent">Intake</span></h1>
+        <p class="section-subtitle reveal">Share context so we can tailor your 90‑minute accelerator for maximum ROI.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <section class="panel">
+        <div class="form-container">
+          <div class="form-header">
+            <h1>Tell us about your business</h1>
+            <p>Estimated time: 3–5 minutes.</p>
+          </div>
+
+          <form id="intake-form" class="form-grid" action="#" method="post" novalidate>
+            <div class="full form-group">
+              <label for="full-name">Full Name *</label>
+              <input id="full-name" name="full-name" type="text" required placeholder="Jane Doe">
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input id="email" name="email" type="email" required placeholder="you@company.com">
+            </div>
+
+            <div class="form-group">
+              <label for="company">Company *</label>
+              <input id="company" name="company" type="text" required placeholder="Company Inc.">
+            </div>
+
+            <div class="form-group">
+              <label for="website">Website</label>
+              <input id="website" name="website" type="url" placeholder="https://">
+            </div>
+
+            <div class="form-group">
+              <label for="team-size">Team Size</label>
+              <select id="team-size" name="team-size">
+                <option value="">Select</option>
+                <option>1–3</option><option>4–10</option><option>11–25</option>
+                <option>26–50</option><option>51–100</option><option>100+</option>
+              </select>
+            </div>
+
+            <div class="full form-group">
+              <label for="offer">What's your primary offer? *</label>
+              <input id="offer" name="offer" type="text" required placeholder="e.g., Done‑for‑you service, SaaS plan, coaching">
+            </div>
+
+            <div class="full form-group">
+              <label for="acquisition">How do you acquire leads today?</label>
+              <input id="acquisition" name="acquisition" type="text" placeholder="Outbound, inbound, paid media, referrals…">
+            </div>
+
+            <div class="form-group">
+              <label for="current-cvr">Current Close Rate (%)</label>
+              <input id="current-cvr" name="current-cvr" type="number" min="0" max="100" step="1" placeholder="e.g., 12">
+            </div>
+
+            <div class="form-group">
+              <label for="target-cvr">Target Close Rate (%)</label>
+              <input id="target-cvr" name="target-cvr" type="number" min="0" max="100" step="1" placeholder="e.g., 25">
+            </div>
+
+            <div class="full form-group">
+              <label for="goals">Primary goals for this session *</label>
+              <textarea id="goals" name="goals" required placeholder="Top 3 goals…"></textarea>
+            </div>
+
+            <div class="full form-group">
+              <label for="challenges">Biggest bottlenecks right now *</label>
+              <textarea id="challenges" name="challenges" required placeholder="Where are deals slipping? What blocks scale?"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="budget">Monthly New‑Customer Revenue Target ($)</label>
+              <input id="budget" name="budget" type="number" min="0" step="100">
+            </div>
+
+            <div class="form-group">
+              <label for="timeline">Timeline to implement</label>
+              <select id="timeline" name="timeline">
+                <option value="">Select</option>
+                <option>Immediately</option><option>2–4 weeks</option>
+                <option>1–3 months</option><option>3+ months</option>
+              </select>
+            </div>
+
+            <div class="full form-group">
+              <label for="notes">Anything else we should know?</label>
+              <textarea id="notes" name="notes" placeholder="Links, assets, context…"></textarea>
+            </div>
+
+            <div class="full">
+              <button type="submit" class="btn btn-accent btn-large" style="width:100%;">Submit Intake Form</button>
+            </div>
+          </form>
+
+          <div style="text-align:center; margin-top:24px;">
+            <a class="btn btn-secondary btn-large" href="index.html">Return to Homepage</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="mailto:info@vanpointco.com">Questions? info@vanpointco.com</a>
+        <a href="terms.html">Terms & Refunds</a>
+        <a href="index.html">Homepage</a>
+        <a href="alacarte.html">À La Carte</a>
+      </div>
+      <p>&copy; 2025 Vantage Point — Sales Accelerator</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+  <script src="common.js"></script>
+  <script src="form-handler.js"></script>
+  <script>
+    document.querySelector('.mobile-menu-btn')?.addEventListener('click', function () {
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', String(!expanded));
+      document.getElementById('nav-menu')?.classList.toggle('mobile-open');
+    });
+
+    (function initParticles(){
+      const container = document.querySelector('.particles');
+      if (!container) return;
+      for (let i=0; i<12; i++){
+        const p = document.createElement('div');
+        p.className = 'particle';
+        p.style.left = Math.random()*100 + '%';
+        p.style.animationDelay = Math.random()*20 + 's';
+        p.style.animationDuration = (18 + Math.random()*12) + 's';
+        container.appendChild(p);
+      }
+    })();
+  </script>
+</body>
+</html>
