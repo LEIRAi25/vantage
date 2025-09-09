@@ -1419,6 +1419,8 @@ footer {
   .reserve-card {
     padding: 24px;
     margin: 0;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .reserve-card h3 {
@@ -1427,6 +1429,20 @@ footer {
 
   .reserve-card .price {
     font-size: 28px;
+  }
+
+  /* Ensure reserve content doesn't overflow */
+  .reserve-content {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Fix any potential overflow issues */
+  .panel.highlight-section {
+    overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
   }
 }
 
@@ -1447,6 +1463,16 @@ footer {
   .reserve-card .features li {
     font-size: 14px;
     padding: 6px 0;
+  }
+
+  /* Additional mobile fixes for reserve section */
+  .reserve-content {
+    padding: 0 10px;
+  }
+
+  .panel.highlight-section {
+    padding: 24px 16px;
+    margin: 32px 0;
   }
 }
 
