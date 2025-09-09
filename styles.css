@@ -328,6 +328,44 @@ header {
   height: 200px;
   margin: 0 auto 40px;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Subtle background element for 3D logo */
+.logo-3d-container::before {
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(16, 46, 22, 0.1) 0%, rgba(16, 46, 22, 0.05) 50%, transparent 70%);
+  border-radius: 50%;
+  z-index: -1;
+  animation: gentlePulse 4s ease-in-out infinite;
+}
+
+/* Additional subtle ring */
+.logo-3d-container::after {
+  content: '';
+  position: absolute;
+  width: 140%;
+  height: 140%;
+  border: 1px solid rgba(16, 46, 22, 0.2);
+  border-radius: 50%;
+  z-index: -2;
+  animation: gentleRotate 20s linear infinite reverse;
+}
+
+@keyframes gentlePulse {
+  0%, 100% { 
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
 }
 
 #logo-canvas {
@@ -346,8 +384,10 @@ header {
 .logo-3d-fallback svg {
   width: 180px;
   height: 180px;
-  filter: drop-shadow(0 20px 40px rgba(16, 46, 22, 0.3));
+  filter: drop-shadow(0 20px 40px rgba(16, 46, 22, 0.4)) drop-shadow(0 0 20px rgba(16, 46, 22, 0.2));
   animation: gentleRotate 10s linear infinite;
+  z-index: 1;
+  position: relative;
 }
 
 @keyframes gentleRotate {
