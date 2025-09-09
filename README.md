@@ -30,7 +30,7 @@ vantage-point-website/
 ├── checkout.html           # Redirect page (backup)
 ├── confirmation.html       # Order confirmation
 ├── intake.html            # Session intake form
-├── terms.html             # Terms & refunds
+├── terms.html             # Terms & conditions
 ├── styles.css             # Main stylesheet
 ├── scripts.js             # Main JavaScript
 ├── common.js              # Shared utilities
