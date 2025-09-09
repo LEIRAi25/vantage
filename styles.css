@@ -30,6 +30,44 @@
   box-sizing: border-box;
 }
 
+/* Ensure all borders use dark green theme */
+* {
+  border-color: var(--line-subtle);
+}
+
+/* Override any browser default blue colors */
+*:focus {
+  outline-color: var(--green-bright) !important;
+}
+
+*:focus-visible {
+  outline-color: var(--green-bright) !important;
+}
+
+/* Ensure all form elements use dark green theme */
+input, textarea, select, button {
+  border-color: var(--line-subtle) !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--green-bright) !important;
+  outline-color: var(--green-bright) !important;
+}
+
+/* Override any default link colors */
+a {
+  color: var(--text) !important;
+}
+
+a:hover {
+  color: var(--green-bright) !important;
+}
+
+/* Ensure all borders use the dark theme */
+details, summary, fieldset {
+  border-color: var(--line-subtle) !important;
+}
+
 html {
   scroll-behavior: smooth;
 }
