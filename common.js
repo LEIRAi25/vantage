@@ -24,13 +24,13 @@ function initParticles() {
   const particlesContainer = document.querySelector('.particles');
   if (!particlesContainer) return;
   
-  const particleCount = 15;
+  const particleCount = 12;
   for (let i = 0; i < particleCount; i++) {
     const particle = document.createElement('div');
     particle.className = 'particle';
     particle.style.left = Math.random() * 100 + '%';
-    particle.style.animationDelay = Math.random() * 20 + 's';
-    particle.style.animationDuration = (20 + Math.random() * 10) + 's';
+    particle.style.animationDelay = Math.random() * 25 + 's';
+    particle.style.animationDuration = (25 + Math.random() * 15) + 's';
     particlesContainer.appendChild(particle);
   }
 }
@@ -158,7 +158,7 @@ function animateCounter(element) {
     
     let display = Math.floor(current);
     if (target >= 1000000) {
-      display = (current / 1000).toFixed(0);
+      display = (current / 1000000).toFixed(1);
     }
     
     element.textContent = prefix + display.toLocaleString() + suffix;
@@ -176,7 +176,7 @@ function initTestimonialCarousel() {
   
   function goToSlide(index) {
     currentSlide = index;
-    track.style.transform = `translateX(-${index * 100}%)`;
+    track.style.transform = `translateX(-${index * 33.333}%)`;
     
     dots.forEach((dot, i) => {
       dot.classList.toggle('active', i === index);

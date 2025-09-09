@@ -307,7 +307,7 @@ header {
 
 @keyframes float {
   from {
-    transform: translateY(100vh) translateX(0);
+    transform: translateY(100vh);
     opacity: 0;
   }
   10% {
@@ -317,7 +317,7 @@ header {
     opacity: 0.3;
   }
   to {
-    transform: translateY(-100vh) translateX(100px);
+    transform: translateY(-100vh);
     opacity: 0;
   }
 }
@@ -339,7 +339,7 @@ header {
   position: absolute;
   width: 120%;
   height: 120%;
-  background: radial-gradient(circle, rgba(16, 46, 22, 0.1) 0%, rgba(16, 46, 22, 0.05) 50%, transparent 70%);
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.05) 50%, transparent 70%);
   border-radius: 50%;
   z-index: -1;
   animation: gentlePulse 4s ease-in-out infinite;
@@ -351,7 +351,7 @@ header {
   position: absolute;
   width: 140%;
   height: 140%;
-  border: 1px solid rgba(16, 46, 22, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 50%;
   z-index: -2;
   animation: gentleRotate 20s linear infinite reverse;
@@ -622,11 +622,14 @@ header {
 .testimonial-track {
   display: flex;
   transition: transform 0.5s var(--transition-smooth);
+  width: 300%;
 }
 
 .testimonial-slide {
-  flex: 0 0 100%;
+  flex: 0 0 33.333%;
   text-align: center;
+  width: 33.333%;
+  box-sizing: border-box;
 }
 
 .testimonial-text {
@@ -714,7 +717,7 @@ header {
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 48px;
+  gap: 64px;
   margin-top: 48px;
 }
 
@@ -725,10 +728,12 @@ header {
   border: 2px solid #222;
   border-radius: 20px;
   padding: 40px;
+  padding-top: 56px;
   text-align: center;
   transition: all 0.3s var(--transition-smooth);
   position: relative;
   transform-style: preserve-3d;
+  overflow: visible;
 }
 
 .black-card-section .product-card:hover {
@@ -751,10 +756,12 @@ header {
   border: 2px solid var(--line);
   border-radius: 20px;
   padding: 40px;
+  padding-top: 56px;
   text-align: center;
   transition: all 0.3s var(--transition-smooth);
   position: relative;
   cursor: pointer;
+  overflow: visible;
 }
 
 .product-card:hover {
@@ -772,19 +779,20 @@ header {
 .product-card .case-study-preview {
   position: absolute;
   top: 100%;
-  left: 0;
-  right: 0;
+  left: -8px;
+  right: -8px;
   background: var(--bg);
   border: 1px solid var(--green);
   border-radius: 12px;
   padding: 16px;
-  margin-top: 8px;
+  margin-top: 12px;
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
   transition: all 0.3s var(--transition-smooth);
-  z-index: 10;
+  z-index: 20;
   pointer-events: none;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 .product-card:hover .case-study-preview {
@@ -812,9 +820,10 @@ header {
   border: 2px solid var(--line);
   border-radius: 24px;
   padding: 32px;
+  padding-top: 48px;
   transition: all 0.4s var(--transition-smooth);
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .bundle-card:hover {
@@ -932,9 +941,10 @@ header {
   border: 2px solid var(--line);
   border-radius: 24px;
   padding: 32px;
+  padding-top: 48px;
   transition: all 0.4s var(--transition-smooth);
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .reserve-card:hover {
@@ -1471,6 +1481,7 @@ footer {
 
   .products-grid {
     grid-template-columns: 1fr;
+    gap: 48px;
   }
 
   .panel {
@@ -1496,6 +1507,7 @@ footer {
 
   .reserve-card {
     padding: 24px;
+    padding-top: 40px;
     margin: 0;
     width: 100%;
     box-sizing: border-box;
@@ -1528,6 +1540,7 @@ footer {
 @media (max-width: 480px) {
   .reserve-card {
     padding: 20px;
+    padding-top: 36px;
   }
 
   .reserve-card h3 {
