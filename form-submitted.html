@@ -99,6 +99,18 @@
             <a href="mailto:info@vanpointco.com" class="btn btn-secondary">Contact Us</a>
           </div>
 
+          <!-- Smart recommendation based on form data -->
+          <div id="recommendationBox" class="panel" style="margin-top: 32px; background: var(--panel-elevated); border: 2px solid var(--green); display: none;">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+              <span style="display: inline-block; padding: 6px 12px; border-radius: 20px; background: var(--green); color: white; font-size: 12px; font-weight: 600; text-transform: uppercase;">Personalized Recommendation</span>
+            </div>
+            <div id="recText" style="margin-bottom: 20px; font-size: 16px; line-height: 1.6; color: var(--text-secondary);"></div>
+            <div id="recCtas" style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 16px;"></div>
+            <div style="color: var(--text-muted); font-size: 14px;">
+              Based on your intake form, here's our recommended next step for maximum ROI.
+            </div>
+          </div>
+
           <div style="background: var(--panel); border: 1px solid var(--line-subtle); border-radius: 12px; padding: 20px; margin-top: 32px;">
             <p style="color: var(--text-muted); font-size: 14px; margin: 0; text-align: center;">
               <strong>Questions?</strong> Email us at <a href="mailto:info@vanpointco.com" style="color: var(--green-bright); text-decoration: none;">info@vanpointco.com</a> 
@@ -131,6 +143,86 @@
       this.setAttribute('aria-expanded', String(!expanded));
       document.getElementById('nav-menu')?.classList.toggle('mobile-open');
     });
+
+    // Show personalized recommendation based on form data
+    function showRecommendation() {
+      const params = new URLSearchParams(location.search);
+      const revenue = params.get('revenue');
+      const deal = params.get('deal');
+      const goal = params.get('goal');
+      const interest = params.get('interest');
+      
+      if (!revenue || !deal || !goal || !interest) {
+        return; // Don't show recommendation if we don't have enough data
+      }
+
+      const box = document.getElementById('recommendationBox');
+      const text = document.getElementById('recText');
+      const ctas = document.getElementById('recCtas');
+      
+      ctas.innerHTML = '';
+
+      let rec = ''; 
+      let buttons = [];
+
+      // Stripe links
+      const LINKS = {
+        standard: 'https://buy.stripe.com/4gM3cudPSaWWguJgTP3AY0w',
+        vip: 'https://buy.stripe.com/4gMbJ0aDG6GGbap0UR3AY0x',
+        starter: 'https://buy.stripe.com/9B65kCfY09SSa6l1YV3AY0t',
+        pro: 'https://buy.stripe.com/cNi00ih241mm2DT4733AY0u',
+        closer: 'https://buy.stripe.com/14A14meTW1mm3HX1YV3AY0v',
+        hts: 'https://buy.stripe.com/aFaaEWdPS3uu4M1fPL3AY0h',
+        obj: 'https://buy.stripe.com/3cI3cubHKc105Q55b73AY0i',
+        follow: 'https://buy.stripe.com/4gM9AScLO8OO4M132Z3AY0m',
+        nurture: 'https://buy.stripe.com/cNiaEWeTW5CC0vL0UR3AY0k',
+        outbound: 'https://buy.stripe.com/9B67sKcLOfdc6U97jf3AY0l',
+        deck: 'https://buy.stripe.com/4gMdR88vy9SS7Ydavr3AY0n'
+      };
+
+      // Recommendation logic
+      if (interest === 'DFY / Retainer' || revenue === '$100k+') {
+        rec = 'You\'re a fit for a Retainer engagement ($12k–$15k/mo). We can kick off with a VIP Accelerator to build your 90-day GTM and ship the first assets.';
+        buttons.push({label:'Book VIP Accelerator — $1,500', href: LINKS.vip});
+      } else if (interest === 'Accelerator session' || deal === '$10k+' || revenue === '$25k–$100k') {
+        rec = 'VIP Accelerator is your fastest path to outcomes (5 fixes, 90-day GTM, deliverables in 72h).';
+        buttons.push({label:'Book VIP Accelerator — $1,500', href: LINKS.vip});
+      } else if (interest === 'À la carte products' || revenue === '< $25k') {
+        if (goal.includes('close')) {
+          rec = 'Start with the High-Ticket Script + Objections + Follow-Up. Or grab the Starter Pack bundle.';
+          buttons.push({label:'Starter Pack — $1,497', href: LINKS.starter});
+          buttons.push({label:'High-Ticket Script — $497', href: LINKS.hts});
+        } else if (goal.includes('Outbound')) {
+          rec = 'You\'ll get momentum from the Pro Pack (call structure + nurture + outbound).';
+          buttons.push({label:'Pro Pack — $2,997', href: LINKS.pro});
+          buttons.push({label:'Outbound Kit — $497', href: LINKS.outbound});
+        } else if (goal.includes('funnels')) {
+          rec = 'Pair VIP Accelerator with Pitch Deck / VSL / Landing Page for conversion.';
+          buttons.push({label:'Book VIP Accelerator — $1,500', href: LINKS.vip});
+          buttons.push({label:'Pitch Deck System — $997', href: LINKS.deck});
+        } else {
+          rec = 'Standard Accelerator is a fast win (audit, 3 live fixes, 30-day plan).';
+          buttons.push({label:'Reserve Standard — $500', href: LINKS.standard});
+        }
+      } else {
+        rec = 'Based on your inputs, VIP Accelerator is the fastest path to measurable ROI.';
+        buttons.push({label:'Book VIP Accelerator — $1,500', href: LINKS.vip});
+      }
+
+      text.innerHTML = rec;
+      buttons.forEach(b => {
+        const a = document.createElement('a');
+        a.className = 'btn btn-primary';
+        a.href = b.href;
+        a.target = '_blank';
+        a.textContent = b.label;
+        ctas.appendChild(a);
+      });
+      box.style.display = 'block';
+    }
+
+    // Show recommendation when page loads
+    document.addEventListener('DOMContentLoaded', showRecommendation);
   </script>
 </body>
 </html>
