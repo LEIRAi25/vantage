@@ -291,6 +291,13 @@ header {
   overflow: hidden;
 }
 
+.hero-cta-top{
+  position:absolute;
+  top:16px;
+  right:16px;
+  z-index:10;
+}
+
 /* Ambient particle background */
 .particles {
   position: absolute;
@@ -1550,10 +1557,21 @@ footer {
 
   /* Fix any potential overflow issues */
   .panel.highlight-section {
-    overflow-x: hidden;
+    overflow: visible; /* prevent right-side clipping on mobile */
     width: 100%;
     box-sizing: border-box;
+    padding-left: 16px;
+    padding-right: 16px;
   }
+
+  /* Ensure header logo background is see-through on phone */
+  header .logo svg circle { fill: transparent !important; }
+
+  /* 3D fallback logo background transparent on phone */
+  .logo-3d-fallback svg circle { fill: transparent !important; }
+
+  /* So badges don't force horizontal overflow */
+  .badge { right: 12px; }
 }
 
 /* Extra small screens */
