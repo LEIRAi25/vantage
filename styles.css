@@ -945,17 +945,16 @@ header {
 
 .reserve-options {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 32px;
   margin: 48px 0;
 }
 
 .reserve-card {
-  background: var(--card);
+  background: var(--panel);
   border: 2px solid var(--line);
   border-radius: 24px;
   padding: 32px;
-  padding-top: 48px;
   transition: all 0.4s var(--transition-smooth);
   position: relative;
   overflow: visible;
@@ -1220,6 +1219,18 @@ header {
   }
 }
 
+/* Extra-small screens: ensure reserve cards fit fully */
+@media (max-width: 420px) {
+  .reserve-options {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .reserve-card {
+    padding: 24px;
+    border-radius: 20px;
+  }
+}
+
 .case-study-metric {
   color: var(--green-bright);
   font-weight: 700;
@@ -1379,12 +1390,49 @@ footer {
   background:
     radial-gradient(80% 120% at 10% 0%, rgba(212,175,55,.18) 0%, rgba(0,0,0,0) 60%),
     radial-gradient(60% 100% at 100% 80%, rgba(185,140,46,.22) 0%, rgba(0,0,0,0) 70%),
-    #000;
+    linear-gradient(180deg, #070707 0%, #0b0b0b 100%);
   border-top: 1px solid rgba(255,255,255,.06);
 }
 .pf-wrap{ max-width:1100px; margin:0 auto; padding:56px 20px; text-align:center; }
-.premium-footer h2{ font-size:clamp(24px,3vw,40px); letter-spacing:.2px; margin-bottom:10px; }
-.premium-footer p{ color:var(--text-muted); margin-bottom:20px; }
+.premium-footer h2{ font-size:clamp(26px,3.2vw,44px); letter-spacing:.2px; margin-bottom:12px; }
+.premium-footer p{ color:var(--text-muted); margin-bottom:16px; }
+
+/* Premium glass card */
+.pf-card{
+  margin: 0 auto; max-width: 900px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 40px 80px -20px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.06);
+  position: relative;
+}
+.pf-card p{ margin-bottom: 18px; }
+
+.pf-card .hero-actions{ justify-content: center; gap: 12px; margin-top: 44px; }
+ 
+.pf-card::after{
+  content: "";
+  position: absolute; inset: -1px;
+  border-radius: 20px;
+  pointer-events: none;
+  background: linear-gradient(120deg, rgba(255,255,255,0.06), rgba(212,175,55,0.18), rgba(255,255,255,0.04));
+  mask: linear-gradient(#000, #000) content-box, linear-gradient(#000, #000);
+  -webkit-mask: linear-gradient(#000, #000) content-box, linear-gradient(#000, #000);
+  -webkit-mask-composite: destination-out; mask-composite: exclude;
+  padding: 1px;
+}
+
+/* Premium bullets */
+.pf-bullets{ display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin:12px 0 8px; }
+.pf-bullets li{ list-style:none; color:var(--text-secondary); font-size:14px; padding-left:18px; position:relative; }
+.pf-bullets li::before{ content:""; position:absolute; left:0; top:7px; width:6px; height:6px; border-radius:50%; background: var(--gold); box-shadow: 0 0 8px rgba(251,191,36,.45); }
+
+@media (max-width: 600px){
+  .pf-card{ padding: 22px; border-radius: 18px; }
+  .pf-bullets{ gap:12px; }
+  .pf-card .hero-actions{ margin-top: 32px; }
+}
 
 .footer-links {
   margin-bottom: 24px;
