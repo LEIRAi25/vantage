@@ -14,22 +14,20 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="favicon.svg">
 
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="new-styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <a href="#main" class="skip-link">Skip to main content</a>
-
   <header>
     <div class="container">
       <nav class="nav" role="navigation">
         <a class="brand" href="index.html">
           <div class="logo">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <circle cx="12" cy="12" r="12" fill="#102e16"/>
-              <polygon points="12,18 18,6 6,6" fill="white"/>
+              <circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M12 17 L8 9 L16 9 Z" fill="currentColor"/>
             </svg>
           </div>
           <span class="brand-text">VANTAGE POINT</span>
@@ -38,125 +36,120 @@
           <span></span><span></span><span></span>
         </button>
         <div class="nav-links" id="nav-menu">
-          <a href="index.html#products" class="btn btn-secondary">Products</a>
-          <a href="alacarte.html" class="btn btn-secondary">À La Carte</a>
-          <a href="index.html#bundles" class="btn btn-secondary">Bundles</a>
-          <a href="/intake.html" class="btn btn-primary">Retainer / DFY</a>
-          <a href="index.html#reserve" class="btn btn-accent">Reserve Session</a>
+          <a href="index.html#approach" class="btn btn-secondary">How We Work</a>
+          <a href="index.html#services" class="btn btn-secondary">Services</a>
+          <a href="index.html#contact" class="btn btn-primary">Schedule Call</a>
         </div>
       </nav>
     </div>
   </header>
 
-  <main id="main">
-    <!-- Grand hero -->
+  <main>
     <section class="hero">
-      <div class="particles" aria-hidden="true"></div>
-      <div class="container">
-        <div class="hero-badge">Policies</div>
-        <h1 class="section-title reveal">Terms <span class="accent">& Conditions</span></h1>
-        <p class="section-subtitle reveal">Please read these terms carefully before purchasing any products or services.</p>
+      <div class="hero-content">
+        <h1>Terms <span class="accent">& Conditions</span></h1>
+        <p class="hero-subtitle">Please read these terms carefully before purchasing any products or services.</p>
       </div>
     </section>
 
-    <div class="container">
-      <section class="panel" aria-labelledby="tos">
-        <h2 id="tos" class="section-title">1. Terms of Service</h2>
-        <p class="section-subtitle">These Terms govern your access to and use of our website, products, and services.</p>
-        <ul style="color:var(--text-secondary);line-height:1.8;max-width:900px;margin:16px auto 0;">
-          <li><strong>Eligibility:</strong> You represent that you have the authority to enter into these Terms on behalf of yourself or your organization.</li>
-          <li><strong>License:</strong> Upon purchase, you receive a non‑exclusive, non‑transferable license to use the delivered materials internally.</li>
-          <li><strong>Prohibited Use:</strong> You may not resell, redistribute, or publicly share paid materials without written consent.</li>
-          <li><strong>Availability:</strong> We may update or discontinue features at any time without liability.</li>
-        </ul>
-      </section>
-
-      <section class="panel" aria-labelledby="payment">
-        <h2 id="payment" class="section-title">2. Payments</h2>
-        <p class="section-subtitle">All prices are in USD unless stated otherwise.</p>
-        <ul style="color:var(--text-secondary);line-height:1.8;max-width:900px;margin:16px auto 0;">
-          <li>Payments are processed securely via our third‑party provider. We do not store full card details.</li>
-          <li>Access to digital assets is granted upon successful payment.</li>
-          <li>Promotions/discounts are time‑limited and may change without notice.</li>
-        </ul>
-      </section>
-
-      <section class="panel highlight-section" aria-labelledby="refunds">
-        <h2 id="refunds" class="section-title">3. Refund Policy</h2>
-        <div class="refund-policy" style="color:var(--text-secondary);line-height:1.8;max-width:900px;margin:16px auto 0;">
-          <div class="policy-item" style="margin-bottom:16px;">
-            <h3>Digital Products & Bundles</h3>
-            <p><strong>No refunds.</strong> Due to instant access and the nature of digital delivery, all sales of downloadable products are final.</p>
-          </div>
-          <div class="policy-item">
-            <h3>Accelerator Sessions</h3>
-            <p><strong>No refunds after booking confirmation.</strong> If you need to reschedule, please notify us at least 48 hours in advance; otherwise, the session may be forfeited.</p>
-          </div>
+    <section class="cta-section">
+        <div class="container">
+            <h2>1. Terms of <span class="accent">Service</span></h2>
+            <p class="cta-description">These Terms govern your access to and use of our website, products, and services.</p>
+            <ul class="service-features">
+                <li><strong>Eligibility:</strong> You represent that you have the authority to enter into these Terms on behalf of yourself or your organization.</li>
+                <li><strong>License:</strong> Upon purchase, you receive a non‑exclusive, non‑transferable license to use the delivered materials internally.</li>
+                <li><strong>Prohibited Use:</strong> You may not resell, redistribute, or publicly share paid materials without written consent.</li>
+                <li><strong>Availability:</strong> We may update or discontinue features at any time without liability.</li>
+            </ul>
         </div>
-      </section>
+    </section>
 
-      <section class="panel" aria-labelledby="ip">
-        <h2 id="ip" class="section-title">4. Intellectual Property</h2>
-        <ul style="color:var(--text-secondary);line-height:1.8;max-width:900px;margin:16px auto 0;">
-          <li>All content, trademarks, and logos are property of Vantage Point unless otherwise noted.</li>
-          <li>You may not remove proprietary notices or attempt to reverse engineer our materials.</li>
-        </ul>
-      </section>
-
-      <section class="panel" aria-labelledby="liability">
-        <h2 id="liability" class="section-title">5. Limitation of Liability</h2>
-        <p class="section-subtitle">To the maximum extent permitted by law, Vantage Point shall not be liable for indirect, incidental, or consequential damages.</p>
-      </section>
-
-      <section class="panel" aria-labelledby="privacy">
-        <h2 id="privacy" class="section-title">6. Privacy</h2>
-        <p class="section-subtitle">We handle your data in accordance with our privacy practices. Contact us if you require a DPA or have data requests.</p>
-      </section>
-
-      <section class="panel" aria-labelledby="contact">
-        <h2 id="contact" class="section-title">7. Contact</h2>
-        <p class="section-subtitle">Questions about these Terms? Email <a href="mailto:info@vanpointco.com">info@vanpointco.com</a>.</p>
-
-        <div style="text-align:center;margin-top:8px;">
-          <a class="btn btn-secondary btn-large" href="index.html">Return to Homepage</a>
+    <section class="cta-section">
+        <div class="container">
+            <h2>2. <span class="accent">Payments</span></h2>
+            <p class="cta-description">All prices are in USD unless stated otherwise.</p>
+            <ul class="service-features">
+                <li>Payments are processed securely via our third‑party provider. We do not store full card details.</li>
+                <li>Access to digital assets is granted upon successful payment.</li>
+                <li>Promotions/discounts are time‑limited and may change without notice.</li>
+            </ul>
         </div>
-      </section>
-    </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>3. Refund <span class="accent">Policy</span></h2>
+            <div class="service-features">
+                <div>
+                  <h3>Digital Products & Bundles</h3>
+                  <p><strong>No refunds.</strong> Due to instant access and the nature of digital delivery, all sales of downloadable products are final.</p>
+                </div>
+                <div>
+                  <h3>Accelerator Sessions</h3>
+                  <p><strong>No refunds after booking confirmation.</strong> If you need to reschedule, please notify us at least 48 hours in advance; otherwise, the session may be forfeited.</p>
+                </div>
+              </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>4. Intellectual <span class="accent">Property</span></h2>
+            <ul class="service-features">
+                <li>All content, trademarks, and logos are property of Vantage Point unless otherwise noted.</li>
+                <li>You may not remove proprietary notices or attempt to reverse engineer our materials.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>5. Limitation of <span class="accent">Liability</span></h2>
+            <p class="cta-description">To the maximum extent permitted by law, Vantage Point shall not be liable for indirect, incidental, or consequential damages.</p>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>6. <span class="accent">Privacy</span></h2>
+            <p class="cta-description">We handle your data in accordance with our privacy practices. Contact us if you require a DPA or have data requests.</p>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>7. <span class="accent">Contact</span></h2>
+            <p class="cta-description">Questions about these Terms? Email <a href="mailto:info@vanpointco.com">info@vanpointco.com</a>.</p>
+            <div class="cta-actions">
+                <a class="btn btn-secondary btn-large" href="index.html">Return to Homepage</a>
+            </div>
+        </div>
+    </section>
+
   </main>
 
   <footer>
     <div class="container">
-      <div class="footer-links">
-        <a href="mailto:info@vanpointco.com">Questions? info@vanpointco.com</a>
-        <a href="terms.html">Terms & Conditions</a>
-        <a href="index.html">Homepage</a>
-        <a href="alacarte.html">À La Carte</a>
+      <div class="footer-content">
+        <div class="footer-brand">
+          <svg class="footer-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M12 17 L8 9 L16 9 Z" fill="currentColor"/>
+          </svg>
+          <span>Vantage Point</span>
+        </div>
+        <div class="footer-links">
+          <a href="index.html#approach">How We Work</a>
+          <a href="index.html#services">Services</a>
+          <a href="mailto:info@vanpointco.com">Contact</a>
+          <a href="/terms.html">Terms</a>
+        </div>
+        <p class="footer-note">© 2025 Vantage Point. All rights reserved.</p>
       </div>
-      <p>&copy; 2025 Vantage Point — Sales Accelerator</p>
     </div>
   </footer>
 
-  <script src="scripts.js"></script>
-  <script src="common.js"></script>
-  <script>
-    document.querySelector('.mobile-menu-btn')?.addEventListener('click', function () {
-      const expanded = this.getAttribute('aria-expanded') === 'true';
-      this.setAttribute('aria-expanded', String(!expanded));
-      document.getElementById('nav-menu')?.classList.toggle('mobile-open');
-    });
-
-    (function initParticles(){
-      const container = document.querySelector('.particles');
-      if (!container) return;
-      for (let i=0; i<12; i++){
-        const p = document.createElement('div');
-        p.className = 'particle';
-        p.style.left = Math.random()*100 + '%';
-        p.style.animationDelay = Math.random()*20 + 's';
-        p.style.animationDuration = (18 + Math.random()*12) + 's';
-        container.appendChild(p);
-      }
-    })();
-  </script>
+  <script src="scripts.js" defer></script>
 </body>
 </html>

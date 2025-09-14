@@ -12,7 +12,7 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="favicon.svg">
   
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="new-styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -20,16 +20,14 @@
   <link rel="canonical" href="https://vanpointco.com/alacarte.html">
 </head>
 <body>
-  <a href="#main" class="skip-link">Skip to main content</a>
-
   <header>
     <div class="container">
       <nav class="nav" role="navigation">
         <a class="brand" href="index.html">
           <div class="logo">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <circle cx="12" cy="12" r="12" fill="#102e16"/>
-              <polygon points="12,18 18,6 6,6" fill="white"/>
+              <circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M12 17 L8 9 L16 9 Z" fill="currentColor"/>
             </svg>
           </div>
           <span class="brand-text">VANTAGE POINT</span>
@@ -40,291 +38,371 @@
           <span></span>
         </button>
         <div class="nav-links" id="nav-menu">
-          <a href="index.html#products" class="btn btn-secondary">Products</a>
-          <a href="alacarte.html" class="btn btn-secondary">À La Carte</a>
-          <a href="index.html#bundles" class="btn btn-secondary">Bundles</a>
-          <a href="/intake.html" class="btn btn-primary">Retainer / DFY</a>
-          <a href="index.html#reserve" class="btn btn-accent">Reserve Session</a>
+          <a href="index.html#approach" class="btn btn-secondary">How We Work</a>
+          <a href="index.html#services" class="btn btn-secondary">Services</a>
+          <a href="index.html#contact" class="btn btn-primary">Schedule Call</a>
         </div>
       </nav>
     </div>
   </header>
 
-  <main id="main">
+  <main>
     <section class="hero">
-      <div class="particles" aria-hidden="true"></div>
       <div class="container">
-        <div class="hero-badge">Plug-and-Play Infrastructure</div>
-        <h1 class="section-title reveal">À La Carte <span class="accent">Sales Assets</span></h1>
-        <p class="section-subtitle reveal">Professional sales infrastructure used in $2.4M+ campaigns</p>
-        <p class="hero-description reveal">
-          Each component is a standalone solution designed for immediate implementation. 
-          These are the exact systems and templates we use with our highest-performing clients.
-        </p>
-        
-        <div class="hero-actions reveal">
-          <a href="index.html#bundles" class="btn btn-secondary btn-large">Check Bundles for Savings</a>
-          <a href="intake.html" class="btn btn-accent btn-large">Book a Session</a>
+        <div class="hero-content">
+          <h1>À La Carte <span class="accent">Sales Assets</span></h1>
+          <p class="hero-subtitle">Professional sales infrastructure used in $2.4M+ campaigns</p>
+          <p class="hero-description">
+            Each component is a standalone solution designed for immediate implementation. 
+            These are the exact systems and templates we use with our highest-performing clients.
+          </p>
+          
+          <div class="hero-actions">
+            <a href="index.html#services" class="btn btn-accent btn-large">Explore Bundles</a>
+            <a href="intake.html" class="btn btn-secondary btn-large">Book a Session</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <div class="container">
-      <section class="panel">
-        <h2 class="section-title">Core Sales Infrastructure</h2>
-        <p class="section-subtitle">Essential components for any high-performing sales operation</p>
+    <section class="services-section" id="services">
+      <div class="container">
+        <h2>Core Sales <span class="accent">Infrastructure</span></h2>
+        <p class="services-description">
+          Essential components for any high-performing sales operation
+        </p>
         
-        <div class="products-grid">
-          <div class="product-card popular reveal">
-            <span class="badge">Most Popular</span>
-            <h3 class="product-title">High-Ticket Closing Script</h3>
-            <div class="product-price">497</div>
-            <p class="product-description">
-              Complete call flow with discovery prompts, objection pre-frames, trial closes, and assumptive close sequences. Used to close deals from $5K to $50K+.
-            </p>
-            <div class="product-includes">
-              <p><strong>Includes:</strong> Call structure, discovery framework, trial close sequences, objection pre-frames</p>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="tier-badge popular-badge">Most Popular</div>
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
             </div>
-            <a href="https://buy.stripe.com/aFaaEWdPS3uu4M1fPL3AY0h" class="btn btn-primary">Get Script</a>
+            <h3>High-Ticket Closing Script</h3>
+            <p>Complete call flow with discovery prompts, objection pre-frames, trial closes, and assumptive close sequences. Used to close deals from $5K to $50K+.</p>
+            <ul class="service-features">
+              <li>Call structure</li>
+              <li>Discovery framework</li>
+              <li>Trial close sequences</li>
+              <li>Objection pre-frames</li>
+            </ul>
+            <div class="service-price">$497</div>
+            <a href="https://buy.stripe.com/aFaaEWdPS3uu4M1fPL3AY0h" class="btn btn-primary btn-large">Get Script</a>
           </div>
 
-          <div class="product-card reveal">
-            <h3 class="product-title">Objection Handling System</h3>
-            <div class="product-price">397</div>
-            <p class="product-description">
-              Root-cause mapping system with proven language patterns for the 12 most common objections. Includes both prevention and response strategies.
-            </p>
-            <div class="product-includes">
-              <p><strong>Includes:</strong> Objection map, response scripts, prevention techniques, practice scenarios</p>
+          <div class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
             </div>
-            <a href="https://buy.stripe.com/3cI3cubHKc105Q55b73AY0i" class="btn btn-primary">Get System</a>
+            <h3>Objection Handling System</h3>
+            <p>Root-cause mapping system with proven language patterns for the 12 most common objections. Includes both prevention and response strategies.</p>
+            <ul class="service-features">
+              <li>Objection map</li>
+              <li>Response scripts</li>
+              <li>Prevention techniques</li>
+              <li>Practice scenarios</li>
+            </ul>
+            <div class="service-price">$397</div>
+            <a href="https://buy.stripe.com/3cI3cubHKc105Q55b73AY0i" class="btn btn-primary btn-large">Get System</a>
           </div>
 
-          <div class="product-card reveal">
-            <h3 class="product-title">Sales Call Structure Pack</h3>
-            <div class="product-price">497</div>
-            <p class="product-description">
-              Professional call frameworks for discovery calls, demo calls, and close calls. Includes timing guides and transition phrases.
-            </p>
-            <div class="product-includes">
-              <p><strong>Includes:</strong> 3 call structures, timing guides, transition scripts, follow-up templates</p>
+          <div class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <polyline points="14,2 14,8 20,8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <line x1="16" y1="13" x2="8" y2="13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
             </div>
-            <a href="https://buy.stripe.com/3cIaEW7ru0iifqFdHD3AY0j" class="btn btn-primary">Get Structure Pack</a>
+            <h3>Sales Call Structure Pack</h3>
+            <p>Professional call frameworks for discovery calls, demo calls, and close calls. Includes timing guides and transition phrases.</p>
+            <ul class="service-features">
+              <li>3 call structures</li>
+              <li>Timing guides</li>
+              <li>Transition scripts</li>
+              <li>Follow-up templates</li>
+            </ul>
+            <div class="service-price">$497</div>
+            <a href="https://buy.stripe.com/3cIaEW7ru0iifqFdHD3AY0j" class="btn btn-primary btn-large">Get Structure Pack</a>
           </div>
 
-          <div class="product-card popular reveal">
-            <span class="badge">High Value</span>
-            <h3 class="product-title">12-Week Nurture Sequence</h3>
-            <div class="product-price">697</div>
-            <p class="product-description">
-              Complete email sequence: 4 weeks warm-up, 4 weeks value delivery, 4 weeks conversion. Includes subject lines and automation setup guide.
-            </p>
-            <div class="product-includes">
-              <p><strong>Includes:</strong> 36 email templates, subject lines, automation guide, segmentation strategy</p>
+          <div class="service-card">
+            <div class="tier-badge popular-badge">High Value</div>
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
             </div>
-            <a href="https://buy.stripe.com/cNiaEWeTW5CC0vL0UR3AY0k" class="btn btn-primary">Get Sequence</a>
+            <h3>12-Week Nurture Sequence</h3>
+            <p>Complete email sequence: 4 weeks warm-up, 4 weeks value delivery, 4 weeks conversion. Includes subject lines and automation setup guide.</p>
+            <ul class="service-features">
+              <li>36 email templates</li>
+              <li>Subject lines</li>
+              <li>Automation guide</li>
+              <li>Segmentation strategy</li>
+            </ul>
+            <div class="service-price">$697</div>
+            <a href="https://buy.stripe.com/cNiaEWeTW5CC0vL0UR3AY0k" class="btn btn-primary btn-large">Get Sequence</a>
           </div>
 
-          <div class="product-card reveal">
-            <h3 class="product-title">Outbound Cold Email Kit</h3>
-            <div class="product-price">497</div>
-            <p class="product-description">
-              High-converting cold email templates with personalization frameworks. Includes follow-up sequences and deliverability best practices.
-            </p>
-            <div class="product-includes">
-              <p><strong>Includes:</strong> Email templates, personalization guide, follow-up sequences, deliverability tips</p>
+          <div class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <polyline points="14,2 14,8 20,8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <line x1="16" y1="13" x2="8" y2="13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
             </div>
-            <a href="https://buy.stripe.com/9B67sKcLOfdc6U97jf3AY0l" class="btn btn-primary">Get Kit</a>
+            <h3>Outbound Cold Email Kit</h3>
+            <p>High-converting cold email templates with personalization frameworks. Includes follow-up sequences and deliverability best practices.</p>
+            <ul class="service-features">
+              <li>Email templates</li>
+              <li>Personalization guide</li>
+              <li>Follow-up sequences</li>
+              <li>Deliverability tips</li>
+            </ul>
+            <div class="service-price">$497</div>
+            <a href="https://buy.stripe.com/9B67sKcLOfdc6U97jf3AY0l" class="btn btn-primary btn-large">Get Kit</a>
           </div>
 
-          <div class="product-card reveal">
-            <h3 class="product-title">Follow-Up Engine</h3>
-            <div class="product-price">497</div>
-            <p class="product-description">
-              Systematic follow-up sequences for every stage of the sales process. Never let a prospect go cold again.
-            </p>
-            <div class="product-includes">
-              <p><strong>Includes:</strong> Follow-up templates, timing schedules, CRM integration guide, tracking sheets</p>
+          <div class="service-card">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
             </div>
-            <a href="https://buy.stripe.com/4gM9AScLO8OO4M132Z3AY0m" class="btn btn-primary">Get Engine</a>
+            <h3>Follow-Up Engine</h3>
+            <p>Systematic follow-up sequences for every stage of the sales process. Never let a prospect go cold again.</p>
+            <ul class="service-features">
+              <li>Follow-up templates</li>
+              <li>Timing schedules</li>
+              <li>CRM integration guide</li>
+              <li>Tracking sheets</li>
+            </ul>
+            <div class="service-price">$497</div>
+            <a href="https://buy.stripe.com/4gM9AScLO8OO4M132Z3AY0m" class="btn btn-primary btn-large">Get Engine</a>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="panel">
-        <h2 class="section-title">Advanced Sales Assets</h2>
-        <p class="section-subtitle">Premium tools for scaling and sophisticated sales operations</p>
-        
-        <div class="products-grid">
-          <div class="product-card premium reveal">
-            <span class="badge premium-badge">Premium</span>
-            <h3 class="product-title">Pitch Deck Template System</h3>
-            <div class="product-price">997</div>
-            <p class="product-description">
-              Professional pitch deck templates for offers, funding, and partnerships. Includes narrative frameworks and design guidelines.
-            </p>
-            <div class="product-includes">
-              <p><strong>Includes:</strong> 5 deck templates, narrative frameworks, design assets, presentation guide</p>
-            </div>
-            <a href="https://buy.stripe.com/4gMdR88vy9SS7Ydavr3AY0n" class="btn btn-primary">Get System</a>
-          </div>
-
-          <div class="product-card reveal">
-            <h3 class="product-title">VSL Page Template</h3>
-            <div class="product-price">697</div>
-            <p class="product-description">
-              High-converting video sales letter page template with script framework and optimization guidelines.
-            </p>
-            <div class="product-includes">
-              <p><strong>Includes:</strong> Page template, VSL script, headline formulas, CTA optimization</p>
-            </div>
-            <a href="https://buy.stripe.com/8x24gy8vy4yyemBfPL3AY0o" class="btn btn-primary">Get Template</a>
-          </div>
-
-          <div class="product-card premium reveal">
-            <span class="badge premium-badge">Premium</span>
-            <h3 class="product-title">High-Convert Landing Page</h3>
-            <div class="product-price">997</div>
-            <p class="product-description">
-              Complete landing page system with multiple variations for different offer types. Includes conversion optimization guide.
-            </p>
-            <div class="product-includes">
-              <p><strong>Includes:</strong> 3 page templates, copywriting framework, A/B testing guide, conversion tips</p>
-            </div>
-            <a href="https://buy.stripe.com/aFacN49zC5CC7Yd8nj3AY0p" class="btn btn-primary">Get Landing Page</a>
-          </div>
-
-          <div class="product-card reveal">
-            <h3 class="product-title">SDR Cold Call Script Pack</h3>
-            <div class="product-price">397</div>
-            <p class="product-description">
-              Cold calling scripts for SDRs and appointment setters. Includes gatekeeper scripts and objection responses.
-            </p>
-            <div class="product-includes">
-              <p><strong>Includes:</strong> Call scripts, gatekeeper tactics, objection responses, practice drills</p>
-            </div>
-            <a href="https://buy.stripe.com/5kQbJ04fie98cetcDz3AY0q" class="btn btn-primary">Get Scripts</a>
-          </div>
-
-          <div class="product-card reveal">
-            <h3 class="product-title">Appointment Setter Kit</h3>
-            <div class="product-price">497</div>
-            <p class="product-description">
-              Complete system for booking and confirming high-value appointments. Includes qualification frameworks and reminder sequences.
-            </p>
-            <div class="product-includes">
-              <p><strong>Includes:</strong> Booking scripts, qualification criteria, reminder templates, no-show prevention</p>
-            </div>
-            <a href="https://buy.stripe.com/eVqfZgbHK8OO92havr3AY0r" class="btn btn-primary">Get Kit</a>
-          </div>
-
-          <div class="product-card premium reveal">
-            <span class="badge premium-badge">Ultimate</span>
-            <h3 class="product-title">Sales Playbook Template</h3>
-            <div class="product-price">1497</div>
-            <p class="product-description">
-              Complete sales playbook template with onboarding guides, KPIs, and team training materials. Everything needed to scale a sales team.
-            </p>
-            <div class="product-includes">
-              <p><strong>Includes:</strong> Full playbook template, onboarding guides, KPI dashboards, training materials</p>
-            </div>
-            <a href="https://buy.stripe.com/6oUcN44fi6GG3HXcDz3AY0s" class="btn btn-primary">Get Playbook</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="testimonial">
-        <div class="testimonial-quote">
-          <div class="quote-mark">"</div>
-          <div class="testimonial-text">
-            The High-Ticket Closing Script alone transformed our conversion rate from 8% to 31%. 
-            These aren't just templates—they're battle-tested systems that actually work.
-          </div>
-          <div class="testimonial-author">
-            <strong>Marcus Rodriguez</strong>
-            <span>Sales Director, $5M ARR SaaS</span>
-          </div>
-        </div>
-      </section>
-
-      <section id="faq" class="panel">
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        <div class="faq">
-          <details class="reveal">
-            <summary>Are these just templates or actual working systems?</summary>
-            <p>These are complete working systems used in real campaigns that have generated $2.4M+ in revenue. Each asset includes implementation guides, best practices, and proven methodologies—not just empty templates.</p>
-          </details>
+    <section class="services-section" id="services">
+        <div class="container">
+          <h2>Advanced Sales <span class="accent">Assets</span></h2>
+          <p class="services-description">
+            Premium tools for scaling and sophisticated sales operations
+          </p>
           
-          <details class="reveal">
-            <summary>How quickly can I implement these?</summary>
-            <p>Most individual assets can be implemented within 24-48 hours. We include setup guides and implementation checklists to ensure you can deploy them immediately.</p>
-          </details>
-          
-          <details class="reveal">
-            <summary>Do bundles really save money?</summary>
-            <p>Absolutely. Starter Pack saves $893, Pro Pack saves $1,694, and Closer Pack saves over $2,000 compared to buying individually. The math makes bundles the obvious choice.</p>
-          </details>
-          
-          <details class="reveal">
-            <summary>Can I customize these for my industry?</summary>
-            <p>Yes. Each asset includes customization guidelines and industry-specific examples. For deeper customization, consider our VIP Accelerator which includes personalized asset creation.</p>
-          </details>
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="tier-badge premium-badge">Premium</div>
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3>Pitch Deck Template System</h3>
+              <p>Professional pitch deck templates for offers, funding, and partnerships. Includes narrative frameworks and design guidelines.</p>
+              <ul class="service-features">
+                <li>5 deck templates</li>
+                <li>Narrative frameworks</li>
+                <li>Design assets</li>
+                <li>Presentation guide</li>
+              </ul>
+              <div class="service-price">$997</div>
+              <a href="https://buy.stripe.com/4gMdR88vy9SS7Ydavr3AY0n" class="btn btn-primary btn-large">Get System</a>
+            </div>
+  
+            <div class="service-card">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <polyline points="14,2 14,8 20,8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <line x1="16" y1="13" x2="8" y2="13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3>VSL Page Template</h3>
+              <p>High-converting video sales letter page template with script framework and optimization guidelines.</p>
+              <ul class="service-features">
+                <li>Page template</li>
+                <li>VSL script</li>
+                <li>Headline formulas</li>
+                <li>CTA optimization</li>
+              </ul>
+              <div class="service-price">$697</div>
+              <a href="https://buy.stripe.com/8x24gy8vy4yyemBfPL3AY0o" class="btn btn-primary btn-large">Get Template</a>
+            </div>
+  
+            <div class="service-card">
+              <div class="tier-badge premium-badge">Premium</div>
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3>High-Convert Landing Page</h3>
+              <p>Complete landing page system with multiple variations for different offer types. Includes conversion optimization guide.</p>
+              <ul class="service-features">
+                <li>3 page templates</li>
+                <li>Copywriting framework</li>
+                <li>A/B testing guide</li>
+                <li>Conversion tips</li>
+              </ul>
+              <div class="service-price">$997</div>
+              <a href="https://buy.stripe.com/aFacN49zC5CC7Yd8nj3AY0p" class="btn btn-primary btn-large">Get Landing Page</a>
+            </div>
+  
+            <div class="service-card">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <polyline points="14,2 14,8 20,8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <line x1="16" y1="13" x2="8" y2="13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3>SDR Cold Call Script Pack</h3>
+              <p>Cold calling scripts for SDRs and appointment setters. Includes gatekeeper scripts and objection responses.</p>
+              <ul class="service-features">
+                <li>Call scripts</li>
+                <li>Gatekeeper tactics</li>
+                <li>Objection responses</li>
+                <li>Practice drills</li>
+              </ul>
+              <div class="service-price">$397</div>
+              <a href="https://buy.stripe.com/5kQbJ04fie98cetcDz3AY0q" class="btn btn-primary btn-large">Get Scripts</a>
+            </div>
+  
+            <div class="service-card">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3>Appointment Setter Kit</h3>
+              <p>Complete system for booking and confirming high-value appointments. Includes qualification frameworks and reminder sequences.</p>
+              <ul class="service-features">
+                <li>Booking scripts</li>
+                <li>Qualification criteria</li>
+                <li>Reminder templates</li>
+                <li>No-show prevention</li>
+              </ul>
+              <div class="service-price">$497</div>
+              <a href="https://buy.stripe.com/eVqfZgbHK8OO92havr3AY0r" class="btn btn-primary btn-large">Get Kit</a>
+            </div>
+  
+            <div class="service-card">
+              <div class="tier-badge premium-badge">Ultimate</div>
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <polyline points="14,2 14,8 20,8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <line x1="16" y1="13" x2="8" y2="13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3>Sales Playbook Template</h3>
+              <p>Complete sales playbook template with onboarding guides, KPIs, and team training materials. Everything needed to scale a sales team.</p>
+              <ul class="service-features">
+                <li>Full playbook template</li>
+                <li>Onboarding guides</li>
+                <li>KPI dashboards</li>
+                <li>Training materials</li>
+              </ul>
+              <div class="service-price">$1497</div>
+              <a href="https://buy.stripe.com/6oUcN44fi6GG3HXcDz3AY0s" class="btn btn-primary btn-large">Get Playbook</a>
+            </div>
+          </div>
         </div>
       </section>
-    </div>
+
+    <section class="testimonial-section">
+      <div class="container">
+        <div class="testimonial-carousel">
+          <div class="testimonial-track" id="testimonial-track">
+            <div class="testimonial-slide">
+              <div class="testimonial-text">
+                "The High-Ticket Closing Script alone transformed our conversion rate from 8% to 31%. These aren't just templates—they're battle-tested systems."
+              </div>
+              <div class="testimonial-author">
+                <strong>Marcus Rodriguez</strong>
+                <span>Sales Director, $5M ARR SaaS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2>Frequently Asked <span class="accent">Questions</span></h2>
+            <div class="faq-grid">
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Are these just templates or actual working systems?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>These are complete working systems used in real campaigns that have generated $2.4M+ in revenue. Each asset includes implementation guides, best practices, and proven methodologies—not just empty templates.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>How quickly can I implement these?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Most individual assets can be implemented within 24-48 hours. We include setup guides and implementation checklists to ensure you can deploy them immediately.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Do bundles really save money?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Absolutely. Starter Pack saves $893, Pro Pack saves $1,694, and Closer Pack saves over $2,000 compared to buying individually. The math makes bundles the obvious choice.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Can I customize these for my industry?</span>
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Yes. Each asset includes customization guidelines and industry-specific examples. For deeper customization, consider our VIP Accelerator which includes personalized asset creation.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+      </section>
   </main>
 
   <footer>
     <div class="container">
-      <div class="footer-links">
-        <a href="mailto:info@vanpointco.com">Questions? info@vanpointco.com</a>
-        <a href="terms.html">Terms & Conditions</a>
-        <a href="index.html">Homepage</a>
-        <a href="index.html#bundles">Bundles</a>
-        <a href="alacarte.html">À La Carte</a>
+      <div class="footer-content">
+        <div class="footer-brand">
+          <svg class="footer-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M12 17 L8 9 L16 9 Z" fill="currentColor"/>
+          </svg>
+          <span>Vantage Point</span>
+        </div>
+        <div class="footer-links">
+          <a href="index.html#approach">How We Work</a>
+          <a href="index.html#services">Services</a>
+          <a href="mailto:info@vanpointco.com">Contact</a>
+          <a href="/terms.html">Terms</a>
+        </div>
+        <p class="footer-note">© 2025 Vantage Point. All rights reserved.</p>
       </div>
-      <p>&copy; 2025 Vantage Point – Sales Accelerator</p>
     </div>
   </footer>
 
-  <script src="scripts.js"></script>
-  <script src="common.js"></script>
+  <script src="scripts.js" defer></script>
 
-  <style>
-    .testimonial {
-      background: linear-gradient(135deg, var(--panel), var(--panel-elevated));
-      border: 2px solid var(--green);
-      border-radius: 24px;
-      padding: 48px;
-      margin: 80px 0;
-      text-align: center;
-    }
-
-    .quote-mark {
-      font-size: 64px;
-      color: var(--green-bright);
-      line-height: 1;
-      margin-bottom: 20px;
-    }
-
-    .testimonial-text {
-      font-size: 20px;
-      font-style: italic;
-      color: var(--text-secondary);
-      margin-bottom: 24px;
-      line-height: 1.6;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .product-card.popular {
-      border-color: var(--purple);
-    }
-
-    .product-card.premium {
-      border-color: var(--gold);
-    }
-  </style>
 </body>
 </html>

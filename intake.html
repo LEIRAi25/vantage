@@ -14,22 +14,20 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="favicon.svg">
 
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="new-styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <a href="#main" class="skip-link">Skip to main content</a>
-
   <header>
     <div class="container">
       <nav class="nav" role="navigation">
         <a class="brand" href="index.html">
           <div class="logo">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <circle cx="12" cy="12" r="12" fill="#102e16"/>
-              <polygon points="12,18 18,6 6,6" fill="white"/>
+              <circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M12 17 L8 9 L16 9 Z" fill="currentColor"/>
             </svg>
           </div>
           <span class="brand-text">VANTAGE POINT</span>
@@ -38,177 +36,168 @@
           <span></span><span></span><span></span>
         </button>
         <div class="nav-links" id="nav-menu">
-          <a href="index.html#products" class="btn btn-secondary">Products</a>
-          <a href="alacarte.html" class="btn btn-secondary">À La Carte</a>
-          <a href="index.html#bundles" class="btn btn-secondary">Bundles</a>
-          <a href="/intake.html" class="btn btn-primary">Retainer / DFY</a>
-          <a href="index.html#reserve" class="btn btn-accent">Reserve Session</a>
+          <a href="index.html#approach" class="btn btn-secondary">How We Work</a>
+          <a href="index.html#services" class="btn btn-secondary">Services</a>
+          <a href="index.html#contact" class="btn btn-primary">Schedule Call</a>
         </div>
       </nav>
     </div>
   </header>
 
-  <main id="main">
-    <!-- Hero Section -->
+  <main>
     <section class="hero">
-      <div class="particles" aria-hidden="true"></div>
-      <div class="container">
-        <div class="hero-badge">Smart Intake</div>
-        <h1 class="section-title reveal">Intake & <span class="accent">Recommendation</span></h1>
-        <p class="section-subtitle reveal">Answer 60 seconds of questions. We'll recommend the fastest path to ROI.</p>
+      <div class="hero-content">
+        <h1>Intake & <span class="accent">Recommendation</span></h1>
+        <p class="hero-subtitle">Answer 60 seconds of questions. We'll recommend the fastest path to ROI.</p>
       </div>
     </section>
 
-    <div class="container">
-      <section class="panel">
-        <div class="form-container">
-          <div class="form-header">
-            <h1>Tell us about your business</h1>
-            <p>Estimated time: 2–3 minutes. We'll recommend the best solution for your situation.</p>
+    <section class="cta-section">
+      <div class="container">
+        <h2>Tell us about your <span class="accent">business</span></h2>
+        <p class="cta-description">Estimated time: 2–3 minutes. We'll recommend the best solution for your situation.</p>
+        
+        <form id="vpIntake" class="form-grid" 
+              action="https://formsubmit.co/info@vanpointco.com" 
+              method="POST">
+          
+          <!-- Hidden: redirect & metadata -->
+          <input type="hidden" name="_subject" value="New Vantage Point Intake">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="utm_source" id="utm_source">
+          <input type="hidden" name="utm_medium" id="utm_medium">
+          <input type="hidden" name="utm_campaign" id="utm_campaign">
+          <input type="hidden" name="_next" value="https://vanpointco.com/form-submitted.html">
+
+          <div class="form-group">
+            <label for="name">Full name *</label>
+            <input id="name" name="name" type="text" required placeholder="Jane Doe">
+          </div>
+          <div class="form-group">
+            <label for="email">Work email *</label>
+            <input id="email" name="email" type="email" required placeholder="you@company.com">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" placeholder="+1 (555) 123-4567">
+          </div>
+          <div class="form-group">
+            <label for="company">Company / Brand *</label>
+            <input id="company" name="company" type="text" required placeholder="Company Inc.">
           </div>
 
-          <!-- INTAKE FORM -->
-          <form id="vpIntake" class="form-grid" 
-                action="https://formsubmit.co/info@vanpointco.com" 
-                method="POST">
-            
-            <!-- Hidden: redirect & metadata -->
-            <input type="hidden" name="_subject" value="New Vantage Point Intake">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="utm_source" id="utm_source">
-            <input type="hidden" name="utm_medium" id="utm_medium">
-            <input type="hidden" name="utm_campaign" id="utm_campaign">
-            <input type="hidden" name="_next" value="https://vanpointco.com/form-submitted.html">
+          <div class="form-group">
+            <label for="role">Role *</label>
+            <select id="role" name="role" required>
+              <option value="">Select your role</option>
+              <option>Owner / Founder</option>
+              <option>Executive / Sales Leader</option>
+              <option>Individual Seller / Freelancer</option>
+              <option>Marketing / Ops</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="team">Team size *</label>
+            <select id="team" name="team" required>
+              <option value="">Select team size</option>
+              <option>Just me</option>
+              <option>2–5</option>
+              <option>6–15</option>
+              <option>16–50</option>
+              <option>50+</option>
+            </select>
+          </div>
 
-            <div class="form-group">
-              <label for="name">Full name *</label>
-              <input id="name" name="name" type="text" required placeholder="Jane Doe">
-            </div>
-            <div class="form-group">
-              <label for="email">Work email *</label>
-              <input id="email" name="email" type="email" required placeholder="you@company.com">
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone</label>
-              <input id="phone" name="phone" type="tel" placeholder="+1 (555) 123-4567">
-            </div>
-            <div class="form-group">
-              <label for="company">Company / Brand *</label>
-              <input id="company" name="company" type="text" required placeholder="Company Inc.">
-            </div>
+          <div class="form-group">
+            <label for="revenue">Monthly revenue *</label>
+            <select id="revenue" name="revenue" required>
+              <option value="">Select revenue range</option>
+              <option>< $25k</option>
+              <option>$25k–$100k</option>
+              <option>$100k+</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="deal">Typical deal size *</label>
+            <select id="deal" name="deal" required>
+              <option value="">Select deal size</option>
+              <option>< $1k</option>
+              <option>$1k–$10k</option>
+              <option>$10k+</option>
+            </select>
+          </div>
 
-            <div class="form-group">
-              <label for="role">Role *</label>
-              <select id="role" name="role" required>
-                <option value="">Select your role</option>
-                <option>Owner / Founder</option>
-                <option>Executive / Sales Leader</option>
-                <option>Individual Seller / Freelancer</option>
-                <option>Marketing / Ops</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="team">Team size *</label>
-              <select id="team" name="team" required>
-                <option value="">Select team size</option>
-                <option>Just me</option>
-                <option>2–5</option>
-                <option>6–15</option>
-                <option>16–50</option>
-                <option>50+</option>
-              </select>
-            </div>
+          <div class="full form-group">
+            <label for="goal">Primary goal (pick one) *</label>
+            <select id="goal" name="goal" required>
+              <option value="">Select your primary goal</option>
+              <option>Increase close rate</option>
+              <option>Build outbound system</option>
+              <option>Launch funnels + automation</option>
+              <option>Train / hire sales team</option>
+              <option>Raise capital / pitch upgrade</option>
+            </select>
+          </div>
 
-            <div class="form-group">
-              <label for="revenue">Monthly revenue *</label>
-              <select id="revenue" name="revenue" required>
-                <option value="">Select revenue range</option>
-                <option>< $25k</option>
-                <option>$25k–$100k</option>
-                <option>$100k+</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="deal">Typical deal size *</label>
-              <select id="deal" name="deal" required>
-                <option value="">Select deal size</option>
-                <option>< $1k</option>
-                <option>$1k–$10k</option>
-                <option>$10k+</option>
-              </select>
-            </div>
+          <div class="full form-group">
+            <label for="bottleneck">Biggest bottleneck *</label>
+            <textarea id="bottleneck" name="bottleneck" required 
+                      placeholder="Where are you getting stuck? (e.g., objections, follow-up, call flow, deliverability)"></textarea>
+          </div>
 
-            <div class="full form-group">
-              <label for="goal">Primary goal (pick one) *</label>
-              <select id="goal" name="goal" required>
-                <option value="">Select your primary goal</option>
-                <option>Increase close rate</option>
-                <option>Build outbound system</option>
-                <option>Launch funnels + automation</option>
-                <option>Train / hire sales team</option>
-                <option>Raise capital / pitch upgrade</option>
-              </select>
-            </div>
+          <div class="form-group">
+            <label for="timeline">Timeline *</label>
+            <select id="timeline" name="timeline" required>
+              <option value="">Select timeline</option>
+              <option>Immediate (this month)</option>
+              <option>30–60 days</option>
+              <option>Quarter</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="interest">Interest *</label>
+            <select id="interest" name="interest" required>
+              <option value="">Select your interest</option>
+              <option>À la carte products</option>
+              <option>Accelerator session</option>
+              <option>DFY / Retainer</option>
+              <option>Unsure — recommend for me</option>
+            </select>
+          </div>
 
-            <div class="full form-group">
-              <label for="bottleneck">Biggest bottleneck *</label>
-              <textarea id="bottleneck" name="bottleneck" required 
-                        placeholder="Where are you getting stuck? (e.g., objections, follow-up, call flow, deliverability)"></textarea>
-            </div>
+          <div class="full form-group">
+            <button type="submit" class="btn btn-accent btn-large" style="width:100%;">Submit Intake</button>
+          </div>
+        </form>
 
-            <div class="form-group">
-              <label for="timeline">Timeline *</label>
-              <select id="timeline" name="timeline" required>
-                <option value="">Select timeline</option>
-                <option>Immediate (this month)</option>
-                <option>30–60 days</option>
-                <option>Quarter</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="interest">Interest *</label>
-              <select id="interest" name="interest" required>
-                <option value="">Select your interest</option>
-                <option>À la carte products</option>
-                <option>Accelerator session</option>
-                <option>DFY / Retainer</option>
-                <option>Unsure — recommend for me</option>
-              </select>
-            </div>
-
-            <div class="full form-group">
-              <button type="submit" class="btn btn-accent btn-large" style="width:100%;">Submit Intake</button>
-            </div>
-          </form>
-
-        </div>
-      </section>
-    </div>
+      </div>
+    </section>
   </main>
 
   <footer>
     <div class="container">
-      <div class="footer-links">
-        <a href="mailto:info@vanpointco.com">Questions? info@vanpointco.com</a>
-        <a href="terms.html">Terms & Conditions</a>
-        <a href="index.html">Homepage</a>
-        <a href="alacarte.html">À La Carte</a>
+      <div class="footer-content">
+        <div class="footer-brand">
+          <svg class="footer-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M12 17 L8 9 L16 9 Z" fill="currentColor"/>
+          </svg>
+          <span>Vantage Point</span>
+        </div>
+        <div class="footer-links">
+          <a href="index.html#approach">How We Work</a>
+          <a href="index.html#services">Services</a>
+          <a href="mailto:info@vanpointco.com">Contact</a>
+          <a href="/terms.html">Terms</a>
+        </div>
+        <p class="footer-note">© 2025 Vantage Point. All rights reserved.</p>
       </div>
-      <p>&copy; 2025 Vantage Point — Sales Accelerator</p>
     </div>
   </footer>
 
-  <script src="scripts.js"></script>
-  <script src="common.js"></script>
+  <script src="scripts.js" defer></script>
   <script>
-    // Mobile menu functionality
-    document.querySelector('.mobile-menu-btn')?.addEventListener('click', function () {
-      const expanded = this.getAttribute('aria-expanded') === 'true';
-      this.setAttribute('aria-expanded', String(!expanded));
-      document.getElementById('nav-menu')?.classList.toggle('mobile-open');
-    });
-
     // Capture UTM if present
     const params = new URLSearchParams(location.search);
     ['utm_source','utm_medium','utm_campaign'].forEach(k=>{

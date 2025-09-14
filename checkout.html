@@ -14,78 +14,36 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="favicon.svg">
   
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="new-styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="redirect-container">
-    <div class="redirect-content">
-      <div class="logo">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <circle cx="12" cy="12" r="12" fill="#102e16"/>
-          <polygon points="12,18 18,6 6,6" fill="white"/>
-        </svg>
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Redirecting to <span class="accent">Products...</span></h1>
+        <p class="hero-subtitle">You're being redirected to our products page where you can complete your purchase.</p>
+        <div class="loading-spinner"></div>
+        <a href="index.html#services" class="btn btn-primary">Go to Products Now</a>
       </div>
-      <h1>Redirecting to Products...</h1>
-      <p>You're being redirected to our products page where you can complete your purchase.</p>
-      <div class="loading-spinner"></div>
-      <p><a href="index.html#products" class="btn btn-accent">Go to Products Now</a></p>
-    </div>
-  </div>
+    </section>
+  </main>
 
   <script>
     // Redirect to products page after 2 seconds
     setTimeout(() => {
-      window.location.href = 'index.html#products';
+      window.location.href = 'index.html#services';
     }, 2000);
   </script>
 
   <style>
-    .redirect-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      background: linear-gradient(180deg, #000000, #0a0a0a);
-      color: white;
-      text-align: center;
-      font-family: 'Inter', sans-serif;
-    }
-    
-    .redirect-content {
-      max-width: 500px;
-      padding: 2rem;
-    }
-    
-    .logo {
-      width: 80px;
-      height: 80px;
-      margin: 0 auto 2rem;
-    }
-    
-    .logo svg {
-      width: 100%;
-      height: 100%;
-    }
-    
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #102e16;
-    }
-    
-    p {
-      margin-bottom: 2rem;
-      color: #e5e7eb;
-    }
-    
     .loading-spinner {
       width: 40px;
       height: 40px;
-      border: 3px solid #374151;
-      border-top: 3px solid #102e16;
+      border: 3px solid var(--line);
+      border-top: 3px solid var(--green);
       border-radius: 50%;
       animation: spin 1s linear infinite;
       margin: 0 auto 2rem;
@@ -94,22 +52,6 @@
     @keyframes spin {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
-    }
-    
-    .btn {
-      display: inline-block;
-      padding: 12px 24px;
-      background: #102e16;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-    }
-    
-    .btn:hover {
-      background: #1a4424;
-      transform: translateY(-2px);
     }
   </style>
 </body>
